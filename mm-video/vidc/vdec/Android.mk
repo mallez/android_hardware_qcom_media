@@ -41,6 +41,9 @@ ifeq ($(TARGET_BOARD_PLATFORM),msm7x30)
 libOmxVdec-def += -DMAX_RES_720P
 endif
 
+# Disable here so it can be enabled globally
+libOmxVdec-def += -fno-strict-aliasing
+
 libOmxVdec-def += -D_ANDROID_ICS_
 
 #ifeq ($(TARGET_USES_ION),true)
